@@ -8,7 +8,7 @@
     "agent": {
       "cpu": 0,
       "memory": 0,
-      "start": "/opt/app/consul agent -config-dir=/opt/app/config"
+      "start": "/opt/app/consul agent -join $JOINIP -config-dir=/opt/app/config"
     },
     "server": {
       "cpu": 2,
