@@ -28,7 +28,7 @@ RUN curl -o /opt/src/consul.zip https://releases.hashicorp.com/consul/$CONSUL_VE
 
 ADD . /opt/app/
 
-RUN echo '${start}' > /opt/start \
+RUN echo $start > /opt/start \
  && chmod +x /opt/start
 
 RUN echo $sha > /opt/app/sha
