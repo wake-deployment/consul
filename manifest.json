@@ -1,0 +1,19 @@
+{
+  "platform": "consul",
+  "app": "consul",
+  "owners": [
+    "nathan.herald@microsoft.com"
+  ],
+  "processes": {
+    "agent": {
+      "cpu": 0,
+      "memory": 0,
+      "start": "/opt/app/consul agent -config-dir=/opt/app/config"
+    },
+    "server": {
+      "cpu": 2,
+      "memory": 2,
+      "start": "/opt/app/consul agent -server -config-dir=/opt/app/config"
+    }
+  }
+}
