@@ -1,4 +1,4 @@
-FROM debian:jessie-curl
+FROM buildpack-deps:jessie-curl
 
 MAINTAINER Nathan Herald <nathan.herald@microsoft.com>
 
