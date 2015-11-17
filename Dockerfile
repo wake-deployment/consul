@@ -16,6 +16,8 @@ RUN apt-get update \
  && mkdir /opt/app \
  && mkdir /opt/src
 
+RUN apt-get install unzip
+
 RUN curl -o /opt/src/consul.zip https://releases.hashicorp.com/consul/$CONSUL_VERSION/consul_${CONSUL_VERSION}_linux_amd64.zip \
  && echo "${CONSUL_SHA256}  /opt/src/consul.zip" > /opt/src/consul.sha256 \
  && sha256sum -c /opt/src/consul.sha256 \
