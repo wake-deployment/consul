@@ -13,7 +13,7 @@
     "server": {
       "cpu": 2,
       "memory": 2,
-      "start": "/opt/app/consul agent -server -bootstrap-expect $BOOTSTRAP_EXPECT -config-dir=/opt/app/config"
+      "start": "/opt/app/consul agent -server -bootstrap-expect $BOOTSTRAP_EXPECT -join $JOINIP -config-dir=/opt/app/config"
     }
   }
 }
