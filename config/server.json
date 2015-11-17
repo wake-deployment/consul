@@ -1,6 +1,6 @@
 {
   "dns_config": {
-    "allow_true": false
+    "allow_stale": false
   },
   "server": true
 }
