@@ -8,12 +8,12 @@
     "agent": {
       "cpu": 0,
       "memory": 0,
-      "start": "/opt/app/consul agent -join $JOINIP -config-dir=/opt/app/config"
+      "start": "consul-join -config-dir=/opt/app/config"
     },
     "server": {
       "cpu": 2,
       "memory": 2,
-      "start": "/opt/app/consul agent -server -bootstrap-expect $BOOTSTRAP_EXPECT -join $JOINIP -config-dir=/opt/app/config"
+      "start": "consul-join -server -config-dir=/opt/app/config"
     }
   }
 }
