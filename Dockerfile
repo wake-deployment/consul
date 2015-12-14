@@ -6,9 +6,9 @@ ENV CONSUL_VERSION 0.5.2
 ENV CONSUL_DOWNLOAD_URL https://releases.hashicorp.com/consul/$CONSUL_VERSION/consul_${CONSUL_VERSION}_linux_amd64.zip
 ENV CONSUL_SHA256 171cf4074bfca3b1e46112105738985783f19c47f4408377241b868affa9d445
 
-ENV CONSUL_JOIN_VERSION 0.0.1
+ENV CONSUL_JOIN_VERSION 0.0.2
 ENV CONSUL_JOIN_DOWNLOAD_URL https://github.com/wakeful-deployment/consul-join/releases/download/v${CONSUL_JOIN_VERSION}/consul-join-x86-linux.zip
-ENV CONSUL_JOIN_SHA256 0446b5ed3dc61c2981c49f86ae1e254ac19315f781a9d1e7a3ef91b7eae8d56c
+ENV CONSUL_JOIN_SHA256 f698a8ccbd7e3d7e6c05f39995476930bee36028bc7b961d4083b67a98cfc886
 
 ENV BOOTSTRAP_EXPECT 3
 ENV DNS_RESOLVES consul
@@ -23,7 +23,7 @@ RUN apt-get update \
  && mkdir /opt/app/bin \
  && mkdir /opt/src
 
-RUN apt-get install unzip
+RUN apt-get install unzip -y
 
 RUN curl -o /opt/src/consul.zip "${CONSUL_DOWNLOAD_URL}" \
  && echo "${CONSUL_SHA256}  /opt/src/consul.zip" > /opt/src/consul.sha256 \
