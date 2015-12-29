@@ -3,7 +3,10 @@
   "data_dir": "/data",
   "dns_config": {
     "allow_stale": true,
-    "max_stale": "1s"
+    "max_stale": "5s",
+    "service_ttl": {
+      "*": "5s"
+    }
   },
   "leave_on_terminate": true
 }
